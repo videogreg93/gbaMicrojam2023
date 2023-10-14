@@ -36,10 +36,10 @@ namespace gkf
 my_game::my_game(int completed_games, const mj::game_data& data) :
     _bg(bn::regular_bg_items::gkf_bg.create_bg((256 - 240) / 2, (256 - 160) / 2)),
     _total_frames(play_jingle(mj::game_jingle_type::EXELOTL01, completed_games, data)),
-    _bucket(bn::sprite_items::gkf_bucket.create_sprite(0,60)),
+    _bucket(bn::sprite_items::gkf_bucket.create_sprite(0,55)),
     _difficulty(recommended_difficulty_level(completed_games, data))
 {
-    _bucket_collider.set_position(12,60 + 13);
+    _bucket_collider.set_position(12,55 + 13);
     _bucket_collider.set_dimensions(40,20);
     switch (recommended_difficulty_level(completed_games, data)) {
         case mj::difficulty_level::EASY:
