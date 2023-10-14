@@ -5,7 +5,6 @@
 #include "mj/mj_game_list.h"
 
 #include "bn_regular_bg_items_gkf_bg.h"
-#include "bn_sprite_tiles_items_gkf_candy.h"
 #include "bn_regular_bg_items_tmg_you_lose.h"
 #include "bn_regular_bg_items_tmg_you_win.h"
 #include "bn_sprite_items_gkf_bucket.h"
@@ -90,8 +89,8 @@ mj::game_result my_game::play(const mj::game_data& data)
     if(! _victory && ! _defeat)
     {
         // Update bucket collider
-        _bucket_collider.set_position(_bucket.x() + 12, _bucket.y() + 13);
-        _bucket_collider.set_dimensions(40,20);
+        _bucket_collider.set_position(_bucket.x() + 9, _bucket.y() + 11);
+        _bucket_collider.set_dimensions(49,20);
         if (_elapsed_frames >= 60) {
             _elapsed_frames = 0;
             int offset = data.random.get_int(5);
